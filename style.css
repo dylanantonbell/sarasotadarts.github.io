@@ -25,3 +25,15 @@ footer {
   text-align: center;
   padding: 1em;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery img {
+  width: 300px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
