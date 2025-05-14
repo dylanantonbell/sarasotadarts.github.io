@@ -36,4 +36,19 @@ footer {
   border: 2px solid #ccc;
   border-radius: 5px;
 }
+.venue-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: start;
+}
+
+.venue-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
 
