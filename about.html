@@ -6,6 +6,7 @@
   <title>About | Sarasota Darts</title>
   <link rel="stylesheet" href="style.css?v=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
     .about-content {
       text-align: center;
@@ -18,31 +19,41 @@
       display: flex;
       overflow: hidden;
       width: 100%;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 2rem auto;
       position: relative;
+      align-items: center;
     }
 
     .slide-track {
       display: flex;
       animation: scroll 30s linear infinite;
-      width: calc(250px * 10);
+      align-items: center;
+      width: max-content;
     }
 
     .slide-track img {
-      width: 250px;
-      height: auto;
+      height: 200px;
+      width: auto;
       margin-right: 1rem;
       border-radius: 6px;
       box-shadow: 0 0 6px rgba(0,0,0,0.2);
+      object-fit: contain;
     }
 
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+
+    @media (max-width: 600px) {
+      .slide-track img {
+        height: 150px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>About Sarasota Darts</h1>
