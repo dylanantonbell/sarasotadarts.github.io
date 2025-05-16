@@ -1,36 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sarasota Darts | Contact</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sarasota Darts</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('img/sarasota-map-background.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-container h1 {
+      margin-bottom: 1rem;
+    }
+
+    .contact-container p {
+      margin: 1rem 0;
+      font-size: 1.05rem;
+    }
+
+    .contact-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #0d64d4;
+    }
+
+    header, footer {
+      background-color: rgba(255, 255, 255, 0.95);
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Contact Us</h1>
     <nav>
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
       <a href="leagues.html">Leagues</a>
       <a href="bars.html">Bars & Venues</a>
       <a href="blinddraws.html">Blind Draws</a>
       <a href="gallery.html">Gallery</a>
       <a href="shops.html">Shops</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <p>If you have questions, suggestions, or want to sponsor us, please fill out the form below.</p>
-    <iframe src="https://docs.google.com/forms/d/e/your-form-ID/viewform?embedded=true" width="100%" height="600" frameborder="0">Loading…</iframe>
+    <div class="contact-container">
+      <p><strong>Sarasota Darts</strong> is a central hub for dart players and enthusiasts in the Sarasota area. This website shares information about local dart leagues, active blind draws, tournament results, venue listings, and dart-related events.</p>
+
+      <p>We aim to help players find where to play, when to compete, and how to get involved. If you have questions, need more info, or would like to suggest updates — you can reach out directly via our public Facebook group.</p>
+
+      <p>Much of the community coordination, event posts, and blind draw discussions happen in that group. Polls and posts there help gather attention to what's active in Sarasota County.</p>
+
+      <p>This site was created and maintained by <strong>Dylan Bell</strong> (TDLS President) and will continue to be updated as new content becomes available.</p>
+
+      <a href="https://www.facebook.com/groups/1084653745684918" target="_blank" class="contact-button">Contact Us via Facebook</a>
+    </div>
   </main>
+
   <footer>
     <p>&copy; 2025 Sarasota Darts</p>
     <p>
-      <a href="https://www.facebook.com/groups/1084653745684918/" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/groups/1084653745684918" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-facebook"></i> Join our Facebook Group
       </a>
     </p>
   </footer>
-
 </body>
 </html>
