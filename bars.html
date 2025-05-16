@@ -3,15 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bars & Venues | Sarasota Darts</title>
-  <link rel="stylesheet" href="style.css?v=1.0" />
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <title>Sarasota Darts | Bars & Venues</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .venue-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .venue-card {
+      flex: 1 1 300px;
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      max-width: 350px;
+    }
+
+    .venue-card h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .venue-card p {
+      font-size: 0.95rem;
+      text-align: center;
+      margin: 0.3rem 0;
+    }
+
+    .venue-images {
+      display: flex;
+      gap: 8px;
+      margin-top: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .venue-images img {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      .venue-images {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .venue-images img {
+        max-width: 90%;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Bars & Venues with Dartboards</h1>
     <nav>
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
       <a href="leagues.html">Leagues</a>
       <a href="bars.html">Bars & Venues</a>
       <a href="blinddraws.html">Blind Draws</a>
@@ -23,137 +81,119 @@
   </header>
 
   <main>
-    <section class="venue">
-      <h2>Fox & Swan (Champions Pub)</h2>
-      <p><strong>Address:</strong> 3676 Webber St, Sarasota, FL 34232</p>
-      <p><strong>Dart Boards:</strong> 4 Steel Tip Dart Boards, 2 Soft Tip BullShooter Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/foxandswan-exterior.jpg" alt="Fox & Swan exterior" width="600" height="400" />
-        <img src="img/foxandswan-interior.jpg" alt="Fox & Swan interior" width="800" height="600" />
-      </div>
-    </section>
+    <div class="venue-grid">
 
-    <hr />
+      <section class="venue-card">
+        <h2>Fox & Swan</h2>
+        <p><strong>Address:</strong> 3676 Webber St, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 4 Steel Tip, 2 Soft Tip</p>
+        <div class="venue-images">
+          <img src="img/foxandswan-exterior.jpg" alt="Fox & Swan exterior" />
+          <img src="img/foxandswan-interior.jpg" alt="Fox & Swan interior" />
+        </div>
+      </section>
 
-    <section class="venue">
-      <h2>8-Ball Lounge</h2>
-      <p><strong>Address:</strong> 3527 Webber St, Sarasota, FL 34239</p>
-      <p><strong>Dart Boards:</strong> 3 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/8ball-exterior.jpg" alt="8-Ball Lounge exterior" />
-        <img src="img/8ball-interior.jpg" alt="8-Ball Lounge interior" />
-      </div>
-    </section>
+      <section class="venue-card">
+        <h2>8-Ball Lounge</h2>
+        <p><strong>Address:</strong> 3527 Webber St, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 3 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/8ball-exterior.jpg" alt="8-Ball exterior" />
+          <img src="img/8ball-interior.jpg" alt="8-Ball interior" />
+        </div>
+      </section>
 
-    <hr />
+      <section class="venue-card">
+        <h2>Legends Sports Pub</h2>
+        <p><strong>Address:</strong> 1816 S Osprey Ave, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 2 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/legends-exterior.jpg" alt="Legends exterior" />
+          <img src="img/legends-interior.jpg" alt="Legends interior" />
+        </div>
+      </section>
 
-    <section class="venue">
-      <h2>American Legion Glen Peters Post 266</h2>
-      <p><strong>Address:</strong> 5201 Richardson Rd, Sarasota, FL 34232</p>
-      <p><strong>Dart Boards:</strong> 4 Steel Tip Dart Boards, 3 Soft Tip Dart Boards</p>
-      <p><strong>Note:</strong> Private Club – Membership Required</p>
-      <div class="venue-images">
-        <img src="img/alpost266-exterior.jpg" alt="Post 266 exterior" />
-        <img src="img/alpost266-interior.jpg" alt="Post 266 interior" />
-      </div>
-    </section>
+      <section class="venue-card">
+        <h2>Paddy Wagon</h2>
+        <p><strong>Address:</strong> 3877 Clark Rd, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 2 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/paddywagon-exterior.jpg" alt="Paddy Wagon exterior" />
+          <img src="img/paddywagon-interior.jpg" alt="Paddy Wagon interior" />
+        </div>
+      </section>
 
-    <hr />
+      <section class="venue-card">
+        <h2>Shamrock Pub</h2>
+        <p><strong>Address:</strong> 2257 Ringling Blvd, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 2 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/shamrock-exterior.jpg" alt="Shamrock exterior" />
+          <img src="img/shamrock-interior.jpg" alt="Shamrock interior" />
+        </div>
+      </section>
 
-    <section class="venue">
-      <h2>American Legion Post 30</h2>
-      <p><strong>Address:</strong> 4015 N Lockwood Ridge Rd, Sarasota, FL 34234</p>
-      <p><strong>Dart Boards:</strong> 5 Steel Tip Dart Boards</p>
-      <p><strong>Note:</strong> Private Club – Membership Required</p>
-      <div class="venue-images">
-        <img src="img/alpost30-exterior.jpg" alt="Post 30 exterior" />
-        <img src="img/alpost30-interior.jpg" alt="Post 30 interior" />
-      </div>
-    </section>
+      <section class="venue-card">
+        <h2>Rendezvous Lounge</h2>
+        <p><strong>Address:</strong> 1570 N Lockwood Ridge Rd, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 3 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/rendezvous-exterior.jpg" alt="Rendezvous exterior" />
+          <img src="img/rendezvous-interior.jpg" alt="Rendezvous interior" />
+        </div>
+      </section>
 
-    <hr />
+      <section class="venue-card">
+        <h2>Gateway Live</h2>
+        <p><strong>Address:</strong> 6531 Gateway Ave, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 2 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/gatewaylive-exterior.jpg" alt="Gateway exterior" />
+          <img src="img/gatewaylive-interior.jpg" alt="Gateway interior" />
+        </div>
+      </section>
 
-    <section class="venue">
-      <h2>Gateway Live</h2>
-      <p><strong>Address:</strong> 6531 Gateway Ave, Sarasota, FL 34231</p>
-      <p><strong>Dart Boards:</strong> 2 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/gatewaylive-exterior.jpg" alt="Gateway exterior" />
-        <img src="img/gatewaylive-interior.jpg" alt="Gateway interior" />
-      </div>
-    </section>
+      <section class="venue-card">
+        <h2>American Legion Post 30</h2>
+        <p><strong>Address:</strong> 4015 N Lockwood Ridge Rd, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 5 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/alpost30-exterior.jpg" alt="Post 30 exterior" />
+          <img src="img/alpost30-interior.jpg" alt="Post 30 interior" />
+        </div>
+      </section>
 
-    <hr />
+      <section class="venue-card">
+        <h2>American Legion Post 266</h2>
+        <p><strong>Address:</strong> 5201 Richardson Rd, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 4 Steel Tip, 3 Soft Tip</p>
+        <div class="venue-images">
+          <img src="img/alpost266-exterior.jpg" alt="Post 266 exterior" />
+          <img src="img/alpost266-interior.jpg" alt="Post 266 interior" />
+        </div>
+      </section>
 
-    <section class="venue">
-      <h2>Legends Sports Pub</h2>
-      <p><strong>Address:</strong> 1816 S Osprey Ave, Sarasota, FL 34239</p>
-      <p><strong>Dart Boards:</strong> 2 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/legends-exterior.jpg" alt="Legends exterior" />
-        <img src="img/legends-interior.jpg" alt="Legends interior" />
-      </div>
-    </section>
+      <section class="venue-card">
+        <h2>Coleman's Tavern</h2>
+        <p><strong>Address:</strong> Sarasota, FL</p>
+        <p><strong>Boards:</strong> 2 Soft Tip</p>
+        <div class="venue-images">
+          <img src="img/colemans-tavern-exterior.jpg" alt="Coleman's exterior" />
+          <img src="img/colemans-tavern-interior.jpg" alt="Coleman's interior" />
+        </div>
+      </section>
 
-    <hr />
+      <section class="venue-card">
+        <h2>Linkster’s Tap Room</h2>
+        <p><strong>Address:</strong> US-41, Sarasota, FL</p>
+        <p><strong>Boards:</strong> 2 Steel Tip</p>
+        <div class="venue-images">
+          <img src="img/linksters-exterior.jpg" alt="Linksters exterior" />
+          <img src="img/linksters-interior.jpg" alt="Linksters interior" />
+        </div>
+      </section>
 
-    <section class="venue">
-      <h2>Paddy Wagon Irish Pub</h2>
-      <p><strong>Address:</strong> 3877 Clark Rd, Sarasota, FL 34233</p>
-      <p><strong>Dart Boards:</strong> 2 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/paddywagon-exterior.jpg" alt="Paddy Wagon exterior" />
-        <img src="img/paddywagon-interior.jpg" alt="Paddy Wagon interior" />
-      </div>
-    </section>
-
-    <hr />
-
-    <section class="venue">
-      <h2>Rendezvous Lounge</h2>
-      <p><strong>Address:</strong> 1570 N Lockwood Ridge Rd, Sarasota, FL 34237</p>
-      <p><strong>Dart Boards:</strong> 3 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/rendezvous-exterior.jpg" alt="Rendezvous exterior" />
-        <img src="img/rendezvous-interior.jpg" alt="Rendezvous interior" />
-      </div>
-    </section>
-
-    <hr />
-
-    <section class="venue">
-      <h2>Shamrock Pub</h2>
-      <p><strong>Address:</strong> 2257 Ringling Blvd, Sarasota, FL 34237</p>
-      <p><strong>Dart Boards:</strong> 2 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/shamrock-exterior.jpg" alt="Shamrock exterior" />
-        <img src="img/shamrock-interior.jpg" alt="Shamrock interior" />
-      </div>
-    </section>
-
-    <hr />
-
-    <section class="venue">
-      <h2>Coleman's Tavern</h2>
-      <p><strong>Address:</strong> Sarasota, FL <em>(Address coming soon)</em></p>
-      <p><strong>Dart Boards:</strong> 2 Soft Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/colemanstavern-exterior.jpg" alt="Coleman’s Tavern exterior" />
-        <img src="img/colemanstavern-interior.jpg" alt="Coleman’s Tavern interior" />
-      </div>
-    </section>
-
-    <hr />
-
-    <section class="venue">
-      <h2>Linkster’s Tap Room</h2>
-      <p><strong>Address:</strong> US-41, Sarasota, FL <em>(Address pending confirmation)</em></p>
-      <p><strong>Dart Boards:</strong> 2 Steel Tip Dart Boards</p>
-      <div class="venue-images">
-        <img src="img/linksters-exterior.jpg" alt="Linkster’s exterior" />
-        <img src="img/linksters-interior.jpg" alt="Linkster’s interior" />
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer>
