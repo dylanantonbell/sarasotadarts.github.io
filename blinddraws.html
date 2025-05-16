@@ -5,48 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sarasota Darts | Blind Draws</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .blinddraws-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .blinddraw-box {
+      background: #f9f9f9;
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .blinddraw-box h2 {
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .blinddraw-box h3 {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .blinddraw-box p {
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    .blinddraw-box img {
+      display: block;
+      max-width: 250px;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .calendar {
+      background: #f0f0f0;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      margin-top: 3rem;
+    }
+
+    .calendar h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .calendar th, .calendar td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .calendar th {
+      background-color: #e0e0e0;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Blind Draw Events</h1>
     <nav>
-      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
       <a href="leagues.html">Leagues</a>
       <a href="bars.html">Bars & Venues</a>
       <a href="blinddraws.html">Blind Draws</a>
       <a href="gallery.html">Gallery</a>
       <a href="shops.html">Shops</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <h2>Weekly Events</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Day</th>
-          <th>Venue</th>
-          <th>Time</th>
-          <th>Entry Fee</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tuesday</td>
-          <td>Maverick's</td>
-          <td>8:00 PM</td>
-          <td>$10</td>
-        </tr>
-        <tr>
-          <td>Friday</td>
-          <td>Rusty Hook</td>
-          <td>9:00 PM</td>
-          <td>$5</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="blinddraws-container">
+
+      <div class="blinddraw-box">
+        <h2>Fox & Swan (Champions Pub)</h2>
+        <p><strong>When:</strong> 1st and 3rd Fridays — 8PM (7:30PM signup)</p>
+        <p><strong>Entry:</strong> $10 buy-in — Bar adds $5/head</p>
+        <p>Extra pots if 12+ players: $2 High Dart / $1 Mystery Out / $2 High Out</p>
+        <p>$5 50/50 drawing — Additional bar pot if 20+ players</p>
+        <p><strong>Address:</strong> 3676 Webber St, Sarasota, FL</p>
+        <p><a href="https://www.facebook.com/champions-pub-sarasota-florida-91639892418/" target="_blank">Visit Facebook Page</a></p>
+        <img src="img/foxandswan.png" alt="Fox & Swan" />
+      </div>
+
+      <div class="blinddraw-box">
+        <h2>The Ice House Pub</h2>
+        <p><strong>When:</strong> Saturdays — 8PM (7:30PM signup)</p>
+        <p><strong>Entry:</strong> $10 — Ice House matches the pot up to $200</p>
+        <p><strong>Note:</strong> Adults only</p>
+        <p><strong>Address:</strong> 408 Tamiami Trl #111, Punta Gorda, FL 33950</p>
+        <p><a href="https://www.theicehousepub.com/homepage-m/113-news/frontpage-news/417-steel-tip-blind-draw?responsivizer_template=desktop" target="_blank">Visit Website</a></p>
+      </div>
+
+      <div class="blinddraw-box">
+        <h2>Fanatics & The Last Call</h2>
+        <p><strong>When:</strong> Alternating Fridays — Fanatics at 9PM, The Last Call at 8PM</p>
+        <p><strong>Entry:</strong> $10 buy-ins with additional pots</p>
+        <img src="img/fanaticssofttip.png" alt="Fanatics Soft Tip" />
+      </div>
+
+      <div class="calendar">
+        <h2>Upcoming Blind Draw Calendar</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Time</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>May 17 (Fri)</td>
+              <td>Fox & Swan</td>
+              <td>8:00 PM</td>
+              <td>Steel Tip</td>
+            </tr>
+            <tr>
+              <td>May 18 (Sat)</td>
+              <td>Ice House Pub</td>
+              <td>8:00 PM</td>
+              <td>Steel Tip</td>
+            </tr>
+            <tr>
+              <td>May 24 (Fri)</td>
+              <td>Fanatics</td>
+              <td>9:00 PM</td>
+              <td>Soft Tip</td>
+            </tr>
+            <tr>
+              <td>May 31 (Fri)</td>
+              <td>The Last Call</td>
+              <td>8:00 PM</td>
+              <td>Soft Tip</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </main>
-    <footer>
+
+  <footer>
     <p>&copy; 2025 Sarasota Darts</p>
     <p>
       <a href="https://www.facebook.com/groups/1084653745684918/" target="_blank" rel="noopener noreferrer">
@@ -54,6 +171,5 @@
       </a>
     </p>
   </footer>
-
 </body>
 </html>
