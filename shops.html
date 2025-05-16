@@ -9,7 +9,9 @@
   <style>
     main {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 2rem;
       padding: 2rem;
     }
     .venue {
@@ -17,13 +19,14 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
+      max-width: 300px;
       text-align: center;
+      flex: 1;
     }
     .venue img {
       max-width: 100%;
       height: auto;
-      margin: 1rem;
+      margin: 1rem 0;
       border-radius: 8px;
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     }
@@ -54,8 +57,36 @@
       </p>
       <p><strong>Note:</strong> Proud sponsor of the TDLS State Team</p>
       <div class="venue-images">
-        <img src="img/mancave-exterior.png" alt="Man Cave Warehouse storefront" width="600" />
-        <img src="img/mancave-logo.png" alt="Man Cave Warehouse logo" width="300" />
+        <img src="img/mancave-exterior.png" alt="Man Cave Warehouse storefront" />
+        <img src="img/mancave-logo.png" alt="Man Cave Warehouse logo" />
+      </div>
+    </section>
+
+    <section class="venue">
+      <h2>Dave's Dart Shop</h2>
+      <p><strong>Address:</strong> 5756 Swift Rd, Sarasota, FL 34231</p>
+      <p><strong>Website:</strong> 
+        <a href="https://davesdarts.com/" target="_blank" rel="noopener noreferrer">
+          www.davesdarts.com
+        </a>
+      </p>
+      <p><strong>Note:</strong> Specializes in dart supplies and accessories</p>
+      <div class="venue-images">
+        <img src="img/davesdartshop-logo.png" alt="Dave's Dart Shop logo" />
+      </div>
+    </section>
+
+    <section class="venue">
+      <h2>Louie's Bicycle Shop</h2>
+      <p><strong>Address:</strong> 6517 Gateway Ave, Sarasota, FL 34231</p>
+      <p><strong>Website:</strong> 
+        <a href="https://www.louiesbicycles.com/" target="_blank" rel="noopener noreferrer">
+          www.louiesbicycles.com
+        </a>
+      </p>
+      <p><strong>Note:</strong> Also stocks darts and dart accessories</p>
+      <div class="venue-images">
+        <img src="img/louiesbicycleshop-logo.png" alt="Louie's Bicycle Shop logo" />
       </div>
     </section>
   </main>
