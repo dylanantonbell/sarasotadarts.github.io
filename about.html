@@ -4,88 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Sarasota Darts</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .about-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .slider {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      position: relative;
+    }
+
+    .slide-track {
+      display: flex;
+      animation: scroll 30s linear infinite;
+      width: calc(250px * 10); /* adjust based on image count */
+    }
+
+    .slide-track img {
+      width: 250px;
+      height: auto;
+      margin-right: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>About Sarasota Darts</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="leagues.html">Leagues</a>
       <a href="bars.html">Bars & Venues</a>
       <a href="blinddraws.html">Blind Draws</a>
       <a href="gallery.html">Gallery</a>
+      <a href="shops.html">Shops</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>About</h2>
-      <p>Sarasota Darters use this group and website to promote and centralize dart activity across Sarasota County. We post active blind draws, dart league schedules, and use polls and announcements to build awareness. Please contact an admin if you know of a bar running a blind draw or league that’s not listed here.</p>
+    <section class="about-content">
+      <h2>Welcome to Sarasota Darts</h2>
+      <p>
+        Sarasota Darts is your one-stop hub for everything darts in the Sarasota area. Whether you're looking for steel tip or soft tip leagues, bars that host games, local shops, or event information — we've got you covered. 
+      </p>
+      <p>
+        Our leagues bring together new players and seasoned competitors across Sarasota County. We also promote blind draws, highlight tournament winners, and celebrate the sponsors who make it all possible.
+      </p>
     </section>
 
-    <section>
-      <h2>🎯 Steel Tip Blind Draws</h2>
-      <ul>
-        <li><strong>Fox & Swan (Champions Pub)</strong><br>
-        1st & 3rd Fridays • 8:00 PM (7:30 PM sign-up) • $10 buy-in<br>
-        Bar adds $5/player; bonus prizes at 12+ and 20+ players<br>
-        <em>Address:</em> 3676 Webber St, Sarasota, FL<br>
-        <a href="https://www.facebook.com/champions-pub-sarasota-florida-91639892418/" target="_blank">Champions Pub Facebook</a></li><br>
-
-        <li><strong>The Ice House Pub (Punta Gorda)</strong><br>
-        Saturdays • 8:00 PM (7:30 PM sign-up) • $10 buy-in<br>
-        Bar matches pot up to $200 • Adults only<br>
-        <em>Address:</em> 408 Tamiami Trl #111, Punta Gorda, FL 33950<br>
-        <a href="https://www.theicehousepub.com/homepage-m/113-news/frontpage-news/417-steel-tip-blind-draw?responsivizer_template=desktop" target="_blank">Ice House Website</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🎯 Soft Tip Blind Draws</h2>
-      <p>Alternating Fridays:</p>
-      <ul>
-        <li><strong>Fanatics</strong> – 9:00 PM</li>
-        <li><strong>The Last Call</strong> – 8:00 PM</li>
-        <li>$10 buy-ins and additional prize pots.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🏆 Steel Tip Leagues</h2>
-      <ul>
-        <li><strong>MDLS (Monday Dart League Sarasota):</strong> Traveling steel-tip league held every Monday at local bars.</li>
-        <li><strong>TDLS (Tuesday Dart League Sarasota):</strong> Traveling steel-tip league held every Tuesday night at rotating venues.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🏆 Soft Tip Leagues</h2>
-      <p>Any location with connected BullShooter boards may run soft tip leagues.</p>
-      <p>Current venues include:</p>
-      <ul>
-        <li>The American Legion Post 266 (Richardson)</li>
-        <li>Fox & Swan (Champions Pub)</li>
-        <li>Coleman's Tavern</li>
-        <li>Moondoggy's Saloon</li>
-        <li>Fanatics</li>
-        <li>The Last Call</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📌 Group Rules</h2>
-      <ul>
-        <li><strong>Be Kind and Courteous:</strong> We're all here to create a welcoming community. Respect others and keep debate healthy.</li>
-        <li><strong>No Personal Attacks:</strong> Negative posts about league bars or venues will be removed unless they concern public safety.</li>
-        <li><strong>Support Growth:</strong> We're working to foster more dart venues and greater league involvement in Sarasota County.</li>
-      </ul>
+    <section class="slider">
+      <div class="slide-track">
+        <img src="img/8ballinterior.jpg" alt="8 Ball Lounge" />
+        <img src="img/FoxandSwanInterior.jpg" alt="Fox and Swan" />
+        <img src="img/tdls-states-2023.jpg" alt="TDLS Champions 2023" />
+        <img src="img/mdls-winners-2022.jpg" alt="MDLS Winners 2022" />
+        <img src="img/tdls-state-team-2025.jpg" alt="TDLS State Team 2025" />
+        <img src="img/rendezvousinterior.jpg" alt="Rendezvous Lounge" />
+        <img src="img/shamrockinterior.jpg" alt="Shamrock Pub" />
+        <img src="img/legendsinterior.jpg" alt="Legends Sports Pub" />
+      </div>
     </section>
   </main>
 
-    <footer>
+  <footer>
     <p>&copy; 2025 Sarasota Darts</p>
     <p>
       <a href="https://www.facebook.com/groups/1084653745684918/" target="_blank" rel="noopener noreferrer">
@@ -93,6 +91,5 @@
       </a>
     </p>
   </footer>
-
 </body>
 </html>
