@@ -1,61 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Sarasota Darts</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sarasota Darts | Blind Draws</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('img/sarasota-map-background.png') no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .contact-container {
-      max-width: 800px;
+    .blinddraws-container {
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-      position: relative;
-      z-index: 1;
     }
 
-    .contact-container h1 {
+    .blinddraw-box {
+      background: #f9f9f9;
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .blinddraw-box h2 {
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .blinddraw-box h3 {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .blinddraw-box p {
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+
+    .blinddraw-box img {
+      display: block;
+      max-width: 250px;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+
+    .calendar {
+      background: #f0f0f0;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      margin-top: 3rem;
+    }
+
+    .calendar h2 {
+      text-align: center;
       margin-bottom: 1rem;
     }
 
-    .contact-container p {
-      margin: 1rem 0;
-      font-size: 1.05rem;
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
     }
 
-    .contact-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #1877f2;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
+    .calendar th, .calendar td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
     }
 
-    .contact-button:hover {
-      background-color: #0d64d4;
+    .calendar th {
+      background-color: #e0e0e0;
     }
   </style>
 </head>
 <body>
-  <header style="background-color: #333; color: white; padding: 1rem 0; text-align: center;">
-    <h1>Contact Us</h1>
+  <header>
+    <h1>Blind Draw Events</h1>
     <nav>
       <a href="about.html">About</a>
       <a href="leagues.html">Leagues</a>
@@ -68,23 +91,83 @@
   </header>
 
   <main>
-    <div class="contact-container">
-      <p><strong>Sarasota Darts</strong> is a central hub for dart players and enthusiasts in the Sarasota area. This website shares information about local dart leagues, active blind draws, tournament results, venue listings, and dart-related events.</p>
+    <div class="blinddraws-container">
 
-      <p>We aim to help players find where to play, when to compete, and how to get involved. If you have questions, need more info, or would like to suggest updates — you can reach out directly via our public Facebook group.</p>
+      <div class="blinddraw-box">
+        <h2>Fox & Swan (Champions Pub)</h2>
+        <p><strong>When:</strong> 1st and 3rd Fridays — 8PM (7:30PM signup)</p>
+        <p><strong>Entry:</strong> $10 buy-in — Bar adds $5/head</p>
+        <p>Extra pots if 12+ players: $2 High Dart / $1 Mystery Out / $2 High Out</p>
+        <p>$5 50/50 drawing — Additional bar pot if 20+ players</p>
+        <p><strong>Address:</strong> 3676 Webber St, Sarasota, FL</p>
+        <p><a href="https://www.facebook.com/champions-pub-sarasota-florida-91639892418/" target="_blank">Visit Facebook Page</a></p>
+        <img src="img/foxandswan-interior2.png" alt="Fox & Swan" />
+      </div>
 
-      <p>Much of the community coordination, event posts, and blind draw discussions happen in that group. Polls and posts there help gather attention to what's active in Sarasota County.</p>
+      <div class="blinddraw-box">
+        <h2>The Ice House Pub</h2>
+        <p><strong>When:</strong> Saturdays — 8PM (7:30PM signup)</p>
+        <p><strong>Entry:</strong> $10 — Ice House matches the pot up to $200</p>
+        <p><strong>Note:</strong> Adults only</p>
+        <p><strong>Address:</strong> 408 Tamiami Trl #111, Punta Gorda, FL 33950</p>
+        <p><a href="https://www.theicehousepub.com/homepage-m/113-news/frontpage-news/417-steel-tip-blind-draw?responsivizer_template=desktop" target="_blank">Visit Website</a></p>
+        <img src="img/icehousepub-interior.png" alt="Ice House Pub" />
+      </div>
 
-      <p>This site was created and maintained by <strong>Dylan Bell</strong> (TDLS President) and will continue to be updated as new content becomes available.</p>
+      <div class="blinddraw-box">
+        <h2>Fanatics & The Last Call (Soft Tip)</h2>
+        <p><strong>When:</strong> Alternating Fridays — Fanatics at 9PM, The Last Call at 8PM</p>
+        <p><strong>Entry:</strong> $10 buy-ins with additional pots</p>
+        <img src="img/fanaticssofttip.png" alt="Fanatics Soft Tip" />
+        <img src="img/lastcall-interior.png" alt="Last Call Soft Tip" />
+      </div>
 
-      <a href="https://www.facebook.com/groups/1084653745684918" target="_blank" class="contact-button">Contact Us via Facebook</a>
+      <div class="calendar">
+        <h2>Upcoming Blind Draw Calendar</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Time</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>(Fri)(1st&3rd of the month)</td>
+              <td>Fox & Swan</td>
+              <td>8:00 PM</td>
+              <td>Steel Tip</td>
+            </tr>
+            <tr>
+              <td>(Sat)</td>
+              <td>Ice House Pub</td>
+              <td>8:00 PM</td>
+              <td>Steel Tip</td>
+            </tr>
+            <tr>
+              <td>(Fri)(every other)</td>
+              <td>Fanatics</td>
+              <td>9:00 PM</td>
+              <td>Soft Tip</td>
+            </tr>
+            <tr>
+              <td>(Fri)(every other)</td>
+              <td>The Last Call</td>
+              <td>8:00 PM</td>
+              <td>Soft Tip</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </main>
 
-  <footer style="background-color: #333; color: white; text-align: center; padding: 1rem 0;">
+  <footer>
     <p>&copy; 2025 Sarasota Darts</p>
     <p>
-      <a href="https://www.facebook.com/groups/1084653745684918" target="_blank" rel="noopener noreferrer" style="color: #fff;">
+      <a href="https://www.facebook.com/groups/1084653745684918/" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-facebook"></i> Join our Facebook Group
       </a>
     </p>
