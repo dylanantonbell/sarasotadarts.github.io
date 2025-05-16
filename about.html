@@ -6,7 +6,6 @@
   <title>About | Sarasota Darts</title>
   <link rel="stylesheet" href="style.css?v=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <style>
     .about-content {
       text-align: center;
@@ -32,6 +31,10 @@
       width: max-content;
     }
 
+    .slide-track.reverse {
+      animation: scroll-reverse 60s linear infinite;
+    }
+
     .slide-track img {
       height: 200px;
       width: auto;
@@ -44,6 +47,11 @@
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+
+    @keyframes scroll-reverse {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
     }
 
     @media (max-width: 600px) {
@@ -81,6 +89,43 @@
 
     <section class="slider">
       <div class="slide-track">
+        <img src="img/8ball-exterior.jpg" alt="8ball exterior">
+        <img src="img/8ball-interior.jpg" alt="8ball interior">
+        <img src="img/alpost30-exterior.jpg" alt="alpost30 exterior">
+        <img src="img/alpost30-interior.jpg" alt="alpost30 interior">
+        <img src="img/alpost266-exterior.jpg" alt="alpost266 exterior">
+        <img src="img/alpost266-interior.jpg" alt="alpost266 interior">
+        <img src="img/colemans-tavern-exterior.jpg" alt="colemans tavern exterior">
+        <img src="img/colemans-tavern-interior.jpg" alt="colemans tavern interior">
+        <img src="img/fanaticssofttip.png" alt="fanatics">
+        <img src="img/foxandswan-exterior.jpg" alt="fox and swan exterior">
+        <img src="img/foxandswan-interior.jpg" alt="fox and swan interior">
+        <img src="img/foxandswan-interior2.png" alt="fox and swan interior 2">
+        <img src="img/gatewaylive-exterior.jpg" alt="gateway live exterior">
+        <img src="img/gatewaylive-interior.jpg" alt="gateway live interior">
+        <img src="img/icehousepub-interior.png" alt="icehousepub interior">
+        <img src="img/kingseat-interior.png" alt="kingseat interior">
+        <img src="img/lastcall-interior.png" alt="lastcall interior">
+        <img src="img/legends-exterior.jpg" alt="legends exterior">
+        <img src="img/legends-interior.jpg" alt="legends interior">
+        <img src="img/linksters-exterior.jpg" alt="linksters exterior">
+        <img src="img/linksters-interior.jpg" alt="linksters interior">
+        <img src="img/mancave-exterior.jpg" alt="mancave exterior">
+        <img src="img/mancave-logo.png" alt="mancave logo">
+        <img src="img/mdls-winners-2022.png" alt="mdls winners 2022">
+        <img src="img/paddywagon-exterior.jpg" alt="paddywagon exterior">
+        <img src="img/paddywagon-interior.jpg" alt="paddywagon interior">
+        <img src="img/rendezvous-exterior.jpg" alt="rendezvous exterior">
+        <img src="img/rendezvous-interior.jpg" alt="rendezvous interior">
+        <img src="img/shamrock-exterior.jpg" alt="shamrock exterior">
+        <img src="img/shamrock-interior.jpg" alt="shamrock interior">
+        <img src="img/tdls-state-team-2025.jpg" alt="tdls team 2025">
+        <img src="img/tdls-states-2023.jpg" alt="tdls champs 2023">
+      </div>
+    </section>
+
+    <section class="slider">
+      <div class="slide-track reverse">
         <img src="img/8ball-exterior.jpg" alt="8ball exterior">
         <img src="img/8ball-interior.jpg" alt="8ball interior">
         <img src="img/alpost30-exterior.jpg" alt="alpost30 exterior">
