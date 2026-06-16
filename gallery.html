@@ -45,7 +45,6 @@
     </p>
   </footer>
 
-  <script src="gallery-data.js"></script>
   <script>
     const categoryOrder = [
       "Blind Draws",
@@ -66,60 +65,77 @@
       return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     }
 
-    categoryOrder.forEach(category => {
-      const images = galleryImages.filter(item => item.category === category);
-      if (!images.length) {
-        return;
-      }
+    function renderGallery(galleryImages) {
+      galleryContainer.innerHTML = "";
+      categoryNav.innerHTML = "";
 
-      const categoryId = makeCategoryId(category);
-      const button = document.createElement("a");
-      button.href = `#${categoryId}`;
-      button.textContent = category;
-      categoryNav.appendChild(button);
+      categoryOrder.forEach(category => {
+        const images = galleryImages.filter(item => item.category === category);
+        if (!images.length) {
+          return;
+        }
 
-      const section = document.createElement("section");
-      section.className = "gallery-category";
-      section.id = categoryId;
+        const categoryId = makeCategoryId(category);
+        const button = document.createElement("a");
+        button.href = `#${categoryId}`;
+        button.textContent = category;
+        categoryNav.appendChild(button);
 
-      const heading = document.createElement("h3");
-      heading.textContent = category;
-      section.appendChild(heading);
+        const section = document.createElement("section");
+        section.className = "gallery-category";
+        section.id = categoryId;
 
-      const grid = document.createElement("div");
-      grid.className = "gallery";
+        const heading = document.createElement("h3");
+        heading.textContent = category;
+        section.appendChild(heading);
 
-      images.forEach(item => {
-        const card = document.createElement("figure");
-        card.className = "gallery-card";
+        const grid = document.createElement("div");
+        grid.className = "gallery";
 
-        const img = document.createElement("img");
-        img.src = item.image;
-        img.alt = item.title;
-        img.loading = "lazy";
-        img.addEventListener("click", () => {
-          lightbox.style.display = "flex";
-          lightboxImg.src = item.image;
-          lightboxImg.alt = item.title;
-          lightboxCaption.textContent = item.caption;
+        images.forEach(item => {
+          const card = document.createElement("figure");
+          card.className = "gallery-card";
+
+          const img = document.createElement("img");
+          img.src = item.image;
+          img.alt = item.title;
+          img.loading = "lazy";
+          img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = item.image;
+            lightboxImg.alt = item.title;
+            lightboxCaption.textContent = item.caption;
+          });
+
+          const caption = document.createElement("figcaption");
+          const title = document.createElement("strong");
+          title.textContent = item.title;
+          const text = document.createElement("span");
+          text.textContent = item.caption;
+          caption.appendChild(title);
+          caption.appendChild(text);
+
+          card.appendChild(img);
+          card.appendChild(caption);
+          grid.appendChild(card);
         });
 
-        const caption = document.createElement("figcaption");
-        const title = document.createElement("strong");
-        title.textContent = item.title;
-        const text = document.createElement("span");
-        text.textContent = item.caption;
-        caption.appendChild(title);
-        caption.appendChild(text);
-
-        card.appendChild(img);
-        card.appendChild(caption);
-        grid.appendChild(card);
+        section.appendChild(grid);
+        galleryContainer.appendChild(section);
       });
+    }
 
-      section.appendChild(grid);
-      galleryContainer.appendChild(section);
-    });
+    fetch("gallery-data.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Could not load gallery data.");
+        }
+        return response.json();
+      })
+      .then(renderGallery)
+      .catch(() => {
+        galleryContainer.innerHTML = "<p class=\"gallery-error\">Gallery images could not be loaded.</p>";
+      });
 
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
