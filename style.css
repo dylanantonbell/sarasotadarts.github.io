@@ -419,6 +419,10 @@ img {
   text-align: center;
 }
 
+.standings-section-title {
+  margin-top: 2rem;
+}
+
 .standings-table-wrap {
   overflow-x: auto;
 }
@@ -568,14 +572,14 @@ img {
   }
 
   .site-nav {
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: visible;
+    flex-wrap: wrap;
     padding-bottom: 0.25rem;
   }
 
   .site-nav a {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     white-space: nowrap;
   }
 
