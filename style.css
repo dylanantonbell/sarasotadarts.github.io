@@ -25,6 +25,7 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top left, rgba(215, 168, 63, 0.14), transparent 34rem),
     linear-gradient(180deg, #fbfaf6 0%, var(--bg) 42%, #ece6da 100%);
@@ -462,7 +463,9 @@ img {
 }
 
 .standings-table-wrap {
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .section-title {
@@ -681,7 +684,7 @@ img {
   }
 
   main {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   header h1 {
@@ -703,6 +706,25 @@ img {
   .site-nav a {
     flex: 0 1 auto;
     white-space: nowrap;
+    font-size: 0.88rem;
+    padding: 0.4rem 0.55rem;
+  }
+
+  .card-grid,
+  .shops-main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .info-card,
+  .calendar,
+  .contact-container,
+  .about-content {
+    padding: 1rem;
+  }
+
+  .about-content {
+    margin-bottom: 1rem;
   }
 
   .slider::before,
@@ -712,6 +734,10 @@ img {
 
   .slide-track img {
     height: 145px;
+  }
+
+  .championship-list {
+    grid-template-columns: 1fr;
   }
 
   .venue-images {
@@ -726,6 +752,82 @@ img {
   .calendar table,
   .standings-table {
     min-width: 620px;
+  }
+
+  .league-standings .standings-table {
+    min-width: 760px;
+  }
+
+  .gallery-category {
+    scroll-margin-top: 1rem;
+  }
+
+  .gallery-category-nav {
+    justify-content: stretch;
+  }
+
+  .gallery-category-nav a {
+    flex: 1 1 9rem;
+  }
+
+  #lightbox {
+    padding: 0.75rem;
+  }
+
+  #lightbox img {
+    max-width: 96%;
+    max-height: 78%;
+  }
+
+  .contact-page {
+    background:
+      linear-gradient(180deg, rgba(245, 243, 238, 0.98), rgba(245, 243, 238, 0.88)),
+      url('img/venues/sarasota-map-background.png') no-repeat center 8rem,
+      var(--bg);
+    background-size: auto, min(82vw, 360px), auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 0.85rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.55rem;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.35rem;
+  }
+
+  .site-nav a {
+    width: 100%;
+    min-height: 2.4rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  .slide-track img {
+    height: 120px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card figcaption {
+    font-size: 0.88rem;
+  }
+
+  footer {
+    padding: 1.25rem 0.75rem;
   }
 }
 
