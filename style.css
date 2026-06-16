@@ -16,39 +16,351 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
 }
+
+nav a:hover {
+  text-decoration: underline;
+}
+
 main {
   padding: 2em;
 }
+
 footer {
   background: #2b2b2b;
   color: white;
   text-align: center;
   padding: 1em;
 }
-.gallery {
+
+.card-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 24px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.gallery img {
-  width: 300px;
+
+.info-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.info-card h2,
+.info-card p {
+  text-align: center;
+}
+
+.info-card img {
   height: auto;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
+
+.about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  position: relative;
+  align-items: center;
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 60s linear infinite;
+  align-items: center;
+  width: max-content;
+}
+
+.slide-track.reverse {
+  animation: scroll-reverse 60s linear infinite;
+}
+
+.slide-track img {
+  height: 200px;
+  width: auto;
+  margin-right: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.league-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.league-column h2 {
+  color: #333;
+}
+
+.league-column img {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.league-column p {
+  margin-top: 1rem;
+}
+
+.venue-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+}
+
+.venue-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.venue-card p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
 .venue-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 10px;
-  justify-content: start;
+  gap: 8px;
+  margin-top: 0.75rem;
+  justify-content: center;
 }
 
 .venue-images img {
-  width: 300px;
+  width: 100%;
+  max-width: 160px;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0,0,0,0.15);
   object-fit: cover;
 }
 
+.blinddraws-container {
+  gap: 2rem;
+}
+
+.blinddraw-box {
+  width: 350px;
+  box-sizing: border-box;
+  padding: 1rem 1.5rem;
+}
+
+.blinddraw-box h2 {
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.blinddraw-box h3 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.blinddraw-box p {
+  margin: 0.5rem 0;
+}
+
+.blinddraw-box img {
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.calendar {
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  margin: 3rem auto 0;
+  max-width: 1000px;
+}
+
+.calendar h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.calendar th {
+  background-color: #e0e0e0;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+#lightbox:target {
+  display: flex;
+}
+
+.shops-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.shop-card {
+  max-width: 300px;
+  text-align: center;
+  flex: 1;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.shop-card img {
+  width: auto;
+  max-width: 100%;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-page {
+  font-family: Arial, sans-serif;
+  background: url('img/sarasota-map-background.png') no-repeat center center fixed;
+  background-size: 50%;
+  background-position: 90% center;
+}
+
+.contact-page header,
+.contact-page footer {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container h1 {
+  margin-bottom: 1rem;
+}
+
+.contact-container p {
+  margin: 1rem 0;
+  font-size: 1.05rem;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #0d64d4;
+}
+
+@media (max-width: 600px) {
+  .slide-track img {
+    height: 150px;
+  }
+
+  .venue-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .venue-images img {
+    max-width: 90%;
+  }
+
+  .gallery img {
+    height: auto;
+  }
+}

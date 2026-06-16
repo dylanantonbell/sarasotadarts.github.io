@@ -5,60 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sarasota Darts | Gallery</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 16px;
-      padding: 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-
-    /* Lightbox styles */
-    #lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-    }
-
-    #lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.3);
-    }
-
-    #lightbox:target {
-      display: flex;
-    }
-
-    @media (max-width: 600px) {
-      .gallery img {
-        height: auto;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -76,7 +22,7 @@
 
   <main>
     <section>
-      <h2 style="text-align:center;">Recent Photos</h2>
+      <h2 class="section-title">Recent Photos</h2>
       <div class="gallery" id="galleryContainer"></div>
     </section>
   </main>

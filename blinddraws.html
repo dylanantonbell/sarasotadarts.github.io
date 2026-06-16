@@ -5,84 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sarasota Darts | Blind Draws</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .blinddraws-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .blinddraw-box {
-      background: #f9f9f9;
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-      width: 350px;
-      box-sizing: border-box;
-    }
-
-    .blinddraw-box h2 {
-      color: #333;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .blinddraw-box h3 {
-      margin-top: 1rem;
-      text-align: center;
-    }
-
-    .blinddraw-box p {
-      margin: 0.5rem 0;
-      text-align: center;
-    }
-
-    .blinddraw-box img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 1rem auto;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-
-    .calendar {
-      background: #f0f0f0;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-      margin-top: 3rem;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .calendar h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .calendar table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    .calendar th, .calendar td {
-      padding: 12px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-
-    .calendar th {
-      background-color: #e0e0e0;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -99,9 +21,9 @@
   </header>
 
   <main>
-    <div class="blinddraws-container">
+    <div class="card-grid blinddraws-container">
 
-      <div class="blinddraw-box">
+      <div class="info-card blinddraw-box">
         <h2>Fox & Swan (Champions Pub)</h2>
         <p><strong>When:</strong> 1st and 3rd Fridays — 8PM (7:30PM signup)</p>
         <p><strong>Entry:</strong> $10 buy-in — Bar adds $5/head</p>
@@ -112,7 +34,7 @@
         <img src="img/foxandswan-interior2.png" alt="Fox & Swan" />
       </div>
 
-      <div class="blinddraw-box">
+      <div class="info-card blinddraw-box">
         <h2>The Ice House Pub</h2>
         <p><strong>When:</strong> Saturdays — 8PM (7:30PM signup)</p>
         <p><strong>Entry:</strong> $10 — Ice House matches the pot up to $200</p>
@@ -122,7 +44,7 @@
         <img src="img/icehousepub-interior.png" alt="Ice House Pub" />
       </div>
 
-      <div class="blinddraw-box">
+      <div class="info-card blinddraw-box">
         <h2>Fanatics & The Last Call (Soft Tip)</h2>
         <p><strong>When:</strong> Alternating Fridays — Fanatics at 9PM, The Last Call at 8PM</p>
         <p><strong>Entry:</strong> $10 buy-ins with additional pots</p>
