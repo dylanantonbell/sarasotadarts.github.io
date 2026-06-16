@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sarasota Darts | Gallery</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -12,7 +13,6 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">About</a>
       <a href="leagues.html">Leagues</a>
-      <a href="tdls-standings.html">TDLS &amp; MDLS</a>
       <a href="bars.html">Bars & Venues</a>
       <a href="blinddraws.html">Blind Draws</a>
       <a href="gallery.html" aria-current="page">Gallery</a>
@@ -22,15 +22,17 @@
   </header>
 
   <main>
-    <section>
+    <section class="gallery-page">
       <h2 class="section-title">Recent Photos</h2>
-      <div class="gallery" id="galleryContainer"></div>
+      <nav class="gallery-category-nav" aria-label="Gallery categories" id="galleryCategoryNav"></nav>
+      <div class="gallery-sections" id="galleryContainer"></div>
     </section>
   </main>
 
   <!-- Lightbox Container -->
   <div id="lightbox" onclick="this.style.display='none'">
     <img id="lightbox-img" src="" alt="Full-size preview" />
+    <p id="lightbox-caption"></p>
   </div>
 
   <footer>
@@ -43,62 +45,93 @@
     </p>
   </footer>
 
+  <script src="gallery-data.js"></script>
   <script>
-  const imageFilenames = [
-    "8ball-exterior.jpg",
-    "8ball-interior.jpg",
-    "alpost30-exterior.jpg",
-    "alpost30-interior.jpg",
-    "alpost266-exterior.jpg",
-    "alpost266-interior.jpg",
-    "colemans-tavern-exterior.jpg",
-    "colemans-tavern-interior.jpg",
-    "fanaticssofttip.png",
-    "foxandswan-exterior.jpg",
-    "foxandswan-interior.jpg",
-    "foxandswan-interior2.png",
-    "gatewaylive-exterior.jpg",
-    "gatewaylive-interior.jpg",
-    "icehousepub-interior.png",
-    "kingseat-interior.png",
-    "lastcall-interior.png",
-    "legends-exterior.jpg",
-    "legends-interior.jpg",
-    "linksters-exterior.jpg",
-    "linksters-interior.jpg",
-    "mancave-exterior.png",
-    "mancave-logo.png",
-    "mdls-winners-2022.png",
-    "paddywagon-exterior.jpg",
-    "paddywagon-interior.jpg",
-    "rendezvous-exterior.jpg",
-    "rendezvous-interior.jpg",
-    "shamrock-exterior.jpg",
-    "shamrock-interior.jpg",
-    "tdls-state-team-2025.jpg",
-    "tdls-states-2023.jpg"
-  ];
+    const categoryOrder = [
+      "Blind Draws",
+      "TDLS Teams",
+      "MDLS Teams",
+      "Venues",
+      "State Team",
+      "Logos"
+    ];
 
-    const gallery = document.getElementById("galleryContainer");
+    const galleryContainer = document.getElementById("galleryContainer");
+    const categoryNav = document.getElementById("galleryCategoryNav");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
 
-    imageFilenames.forEach(filename => {
-      const img = document.createElement("img");
-      img.src = `img/${filename}`;
-      img.alt = filename.replace(/[-_]/g, ' ').replace(/\.\w+$/, '');
-      img.addEventListener("click", () => {
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
+    function makeCategoryId(category) {
+      return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    }
+
+    categoryOrder.forEach(category => {
+      const images = galleryImages.filter(item => item.category === category);
+      if (!images.length) {
+        return;
+      }
+
+      const categoryId = makeCategoryId(category);
+      const button = document.createElement("a");
+      button.href = `#${categoryId}`;
+      button.textContent = category;
+      categoryNav.appendChild(button);
+
+      const section = document.createElement("section");
+      section.className = "gallery-category";
+      section.id = categoryId;
+
+      const heading = document.createElement("h3");
+      heading.textContent = category;
+      section.appendChild(heading);
+
+      const grid = document.createElement("div");
+      grid.className = "gallery";
+
+      images.forEach(item => {
+        const card = document.createElement("figure");
+        card.className = "gallery-card";
+
+        const img = document.createElement("img");
+        img.src = item.image;
+        img.alt = item.title;
+        img.loading = "lazy";
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = item.image;
+          lightboxImg.alt = item.title;
+          lightboxCaption.textContent = item.caption;
+        });
+
+        const caption = document.createElement("figcaption");
+        const title = document.createElement("strong");
+        title.textContent = item.title;
+        const text = document.createElement("span");
+        text.textContent = item.caption;
+        caption.appendChild(title);
+        caption.appendChild(text);
+
+        card.appendChild(img);
+        card.appendChild(caption);
+        grid.appendChild(card);
       });
-      gallery.appendChild(img);
+
+      section.appendChild(grid);
+      galleryContainer.appendChild(section);
     });
 
-    // Close lightbox on Escape key
-    document.addEventListener("keydown", function (e) {
+    lightbox.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+      lightboxCaption.textContent = "";
+    });
+
+    document.addEventListener("keydown", e => {
       if (e.key === "Escape") {
         lightbox.style.display = "none";
+        lightboxImg.src = "";
+        lightboxCaption.textContent = "";
       }
     });
   </script>

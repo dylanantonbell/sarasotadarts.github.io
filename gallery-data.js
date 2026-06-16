@@ -1,0 +1,212 @@
+const galleryImages = [
+  {
+    title: "8-Ball Lounge Blind Draw",
+    category: "Blind Draws",
+    image: "img/venues/8ball-interior.jpg",
+    caption: "8-Ball Lounge hosts a steel tip blind draw every other Friday."
+  },
+  {
+    title: "Fanatics Soft Tip",
+    category: "Blind Draws",
+    image: "img/blind-draws/fanaticssofttip.png",
+    caption: "Fanatics soft tip blind draw information."
+  },
+  {
+    title: "Ice House Pub Blind Draw",
+    category: "Blind Draws",
+    image: "img/blind-draws/icehousepub-interior.png",
+    caption: "The Ice House Pub steel tip blind draw."
+  },
+  {
+    title: "Last Call Soft Tip",
+    category: "Blind Draws",
+    image: "img/blind-draws/lastcall-interior.png",
+    caption: "The Last Call soft tip blind draw location."
+  },
+  {
+    title: "TDLS 2025 State Team",
+    category: "TDLS Teams",
+    image: "img/tdls-teams/tdls-2025-state-team.webp",
+    caption: "Tuesday Dart League Sarasota 2025 team photo."
+  },
+  {
+    title: "MDLS 2022 Champions",
+    category: "MDLS Teams",
+    image: "img/mdls-teams/mdls-winners-2022.png",
+    caption: "Monday Dart League Sarasota 2022 champions."
+  },
+  {
+    title: "8-Ball Lounge Exterior",
+    category: "Venues",
+    image: "img/venues/8ball-exterior.jpg",
+    caption: "Exterior view of 8-Ball Lounge."
+  },
+  {
+    title: "8-Ball Lounge Interior",
+    category: "Venues",
+    image: "img/venues/8ball-interior.jpg",
+    caption: "Interior dart area at 8-Ball Lounge."
+  },
+  {
+    title: "American Legion Post 30 Exterior",
+    category: "Venues",
+    image: "img/venues/alpost30-exterior.jpg",
+    caption: "Exterior view of American Legion Post 30."
+  },
+  {
+    title: "American Legion Post 30 Interior",
+    category: "Venues",
+    image: "img/venues/alpost30-interior.jpg",
+    caption: "Interior dart area at American Legion Post 30."
+  },
+  {
+    title: "American Legion Post 266 Exterior",
+    category: "Venues",
+    image: "img/venues/alpost266-exterior.jpg",
+    caption: "Exterior view of American Legion Post 266."
+  },
+  {
+    title: "American Legion Post 266 Interior",
+    category: "Venues",
+    image: "img/venues/alpost266-interior.jpg",
+    caption: "Interior dart area at American Legion Post 266."
+  },
+  {
+    title: "Coleman's Tavern Exterior",
+    category: "Venues",
+    image: "img/venues/colemans-tavern-exterior.jpg",
+    caption: "Exterior view of Coleman's Tavern."
+  },
+  {
+    title: "Coleman's Tavern Interior",
+    category: "Venues",
+    image: "img/venues/colemans-tavern-interior.jpg",
+    caption: "Interior dart area at Coleman's Tavern."
+  },
+  {
+    title: "Fox & Swan Exterior",
+    category: "Venues",
+    image: "img/venues/foxandswan-exterior.jpg",
+    caption: "Exterior view of Fox & Swan."
+  },
+  {
+    title: "Fox & Swan Interior",
+    category: "Venues",
+    image: "img/venues/foxandswan-interior.jpg",
+    caption: "Interior dart area at Fox & Swan."
+  },
+  {
+    title: "Fox & Swan Dart Area",
+    category: "Venues",
+    image: "img/venues/foxandswan-interior2.png",
+    caption: "Additional dart area photo from Fox & Swan."
+  },
+  {
+    title: "Gateway Live Exterior",
+    category: "Venues",
+    image: "img/venues/gatewaylive-exterior.jpg",
+    caption: "Exterior view of Gateway Live."
+  },
+  {
+    title: "Gateway Live Interior",
+    category: "Venues",
+    image: "img/venues/gatewaylive-interior.jpg",
+    caption: "Interior dart area at Gateway Live."
+  },
+  {
+    title: "King Seat Interior",
+    category: "Venues",
+    image: "img/venues/kingseat-interior.png",
+    caption: "Interior dart area at King Seat."
+  },
+  {
+    title: "Legends Sports Pub Exterior",
+    category: "Venues",
+    image: "img/venues/legends-exterior.jpg",
+    caption: "Exterior view of Legends Sports Pub."
+  },
+  {
+    title: "Legends Sports Pub Interior",
+    category: "Venues",
+    image: "img/venues/legends-interior.jpg",
+    caption: "Interior dart area at Legends Sports Pub."
+  },
+  {
+    title: "Linkster's Tap Room Exterior",
+    category: "Venues",
+    image: "img/venues/linksters-exterior.jpg",
+    caption: "Exterior view of Linkster's Tap Room."
+  },
+  {
+    title: "Linkster's Tap Room Interior",
+    category: "Venues",
+    image: "img/venues/linksters-interior.jpg",
+    caption: "Interior dart area at Linkster's Tap Room."
+  },
+  {
+    title: "Man Cave Warehouse Exterior",
+    category: "Venues",
+    image: "img/venues/mancave-exterior.png",
+    caption: "Exterior view of Man Cave Warehouse."
+  },
+  {
+    title: "Paddy Wagon Exterior",
+    category: "Venues",
+    image: "img/venues/paddywagon-exterior.jpg",
+    caption: "Exterior view of Paddy Wagon."
+  },
+  {
+    title: "Paddy Wagon Interior",
+    category: "Venues",
+    image: "img/venues/paddywagon-interior.jpg",
+    caption: "Interior dart area at Paddy Wagon."
+  },
+  {
+    title: "Rendezvous Lounge Exterior",
+    category: "Venues",
+    image: "img/venues/rendezvous-exterior.jpg",
+    caption: "Exterior view of Rendezvous Lounge."
+  },
+  {
+    title: "Rendezvous Lounge Interior",
+    category: "Venues",
+    image: "img/venues/rendezvous-interior.jpg",
+    caption: "Interior dart area at Rendezvous Lounge."
+  },
+  {
+    title: "Shamrock Pub Exterior",
+    category: "Venues",
+    image: "img/venues/shamrock-exterior.jpg",
+    caption: "Exterior view of Shamrock Pub."
+  },
+  {
+    title: "Shamrock Pub Interior",
+    category: "Venues",
+    image: "img/venues/shamrock-interior.jpg",
+    caption: "Interior dart area at Shamrock Pub."
+  },
+  {
+    title: "TDLS 2023 State Champions",
+    category: "State Team",
+    image: "img/state-team/tdls-states-2023.jpg",
+    caption: "TDLS 2023 state champions."
+  },
+  {
+    title: "Dave's Dart Shop Logo",
+    category: "Logos",
+    image: "img/logos/davesdartshop-logo.png",
+    caption: "Dave's Dart Shop logo."
+  },
+  {
+    title: "Louie's Bicycle Shop Logo",
+    category: "Logos",
+    image: "img/logos/louiesbicycleshop-logo.png",
+    caption: "Louie's Bicycle Shop logo."
+  },
+  {
+    title: "Man Cave Warehouse Logo",
+    category: "Logos",
+    image: "img/logos/mancave-logo.png",
+    caption: "Man Cave Warehouse logo."
+  }
+];
