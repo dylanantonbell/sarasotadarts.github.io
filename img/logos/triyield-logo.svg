@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1008 445" role="img" aria-labelledby="title desc">
+  <title id="title">TriYield logo</title>
+  <desc id="desc">TriYield wordmark with green and lime leaf mark.</desc>
+  <rect width="1008" height="445" fill="#ffffff"/>
+  <g fill="none" stroke="#08a64f" stroke-width="18" stroke-linejoin="round">
+    <path d="M589 162 C612 96 684 68 794 126 C732 211 660 221 600 185 C652 160 695 148 725 149 C681 145 638 151 589 162 Z" fill="#a8d52e"/>
+    <path d="M590 165 C525 184 479 238 436 346"/>
+    <path d="M585 157 C533 137 498 82 521 0 C594 36 620 91 585 157 Z" fill="#a8d52e"/>
+    <path d="M542 70 L581 143"/>
+  </g>
+  <text x="0" y="443" font-family="Arial, Helvetica, sans-serif" font-size="280" font-weight="800" letter-spacing="-10">
+    <tspan fill="#a8d52e">Tri</tspan><tspan fill="#08a64f">Yield</tspan>
+  </text>
+  <text x="995" y="445" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#08a64f">TM</text>
+</svg>

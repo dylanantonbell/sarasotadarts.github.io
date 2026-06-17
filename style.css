@@ -366,16 +366,6 @@ img {
   font-weight: 700;
 }
 
-.sponsor-text-logo strong {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 95px;
-  color: var(--brand-dark);
-  font-size: 1.9rem;
-  line-height: 1;
-}
-
 .league-standings {
   margin-top: 0.75rem;
 }
@@ -728,6 +718,22 @@ img {
   color: white;
   background-color: #0d64d4;
   transform: translateY(-1px);
+}
+
+.legal-disclaimer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+.legal-disclaimer h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.legal-disclaimer p {
+  font-size: 0.95rem;
 }
 
 @media (max-width: 760px) {
