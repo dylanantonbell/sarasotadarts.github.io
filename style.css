@@ -295,6 +295,17 @@ img {
   min-width: 0;
 }
 
+.league-description {
+  max-width: 68ch;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+
+.standings-heading {
+  padding-top: 1rem;
+  border-top: 2px solid var(--line);
+}
+
 .league-column img {
   width: 100%;
   margin-top: 0.75rem;
@@ -322,6 +333,47 @@ img {
 .source-note {
   margin-top: 0.75rem;
   font-size: 0.9rem;
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.sponsor-card {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 150px;
+  padding: 1rem;
+  text-align: center;
+  background: #f8f3e8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.sponsor-card img {
+  max-height: 95px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.sponsor-card p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.sponsor-text-logo strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95px;
+  color: var(--brand-dark);
+  font-size: 1.9rem;
+  line-height: 1;
 }
 
 .league-standings {
