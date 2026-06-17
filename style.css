@@ -306,6 +306,33 @@ img {
   border-top: 2px solid var(--line);
 }
 
+.document-link {
+  margin: 0.75rem 0 1rem;
+  text-align: center;
+}
+
+.document-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.4rem;
+  padding: 0.55rem 0.8rem;
+  color: white;
+  text-decoration: none;
+  background: var(--brand);
+  border-radius: 6px;
+  box-shadow: var(--shadow-soft);
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.document-link a:hover,
+.document-link a:focus-visible {
+  color: white;
+  background: var(--brand-dark);
+  transform: translateY(-1px);
+}
+
 .league-column img {
   width: 100%;
   margin-top: 0.75rem;
